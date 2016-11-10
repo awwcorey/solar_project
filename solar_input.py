@@ -29,7 +29,7 @@ def read_space_objects_data_from_file(input_filename):
                 objects.append(planet)
             else:
                 print("Unknown space object")
-    return objects   
+    return objects
 
 
 def parse_star_parameters(line, star):
@@ -92,8 +92,7 @@ def write_space_objects_data_to_file(output_filename, space_objects):
     """
     with open(output_filename, 'w') as out_file:
         for obj in space_objects:
-            out_file.write('{} {} {} {} {} {} {} {}\n'.format(\
-                obj.type.capitalize(), obj.R, obj.color, obj.m, obj.x, obj.y, obj.Vx, obj.Vy))
+            out_file.write('{} {} {} {} {} {} {} {}\n'.format(obj.type.capitalize(), obj.R, obj.color, obj.m, obj.x, obj.y, obj.Vx, obj.Vy))
         out_file.close()
             # FIXME
 
